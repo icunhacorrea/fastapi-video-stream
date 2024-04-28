@@ -54,8 +54,6 @@ async def video_tag(url: str, request: Request):
         "url": url
     })
 
-
-
 @app.post("/uploadfile")
 async def create_upload_file(file: UploadFile):
     out_url = f"{video_path}/{file.filename}"
