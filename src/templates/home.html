@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FastAPI video streaming</title>
+    </head>
+    <body>
+        <h3>Video upload:</h3>
+        <form action="/uploadfile" enctype="multipart/form-data" method="post">
+        <input name="file" type="file" multiple>
+        <input type="submit">
+
+        <br>
+        <h3>Vídeos:</h3>
+        <ul>
+            {% for video in videos %}
+            <li><a href="http://localhost:8000/video/{{ video }}">{{ video }}</a></li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>
